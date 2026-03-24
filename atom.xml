@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>Your Name</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <id>https://smileyoyo.github.io/Xguai/</id>
+  <link href="https://smileyoyo.github.io/Xguai/" rel="alternate"/>
+  <link href="https://smileyoyo.github.io/Xguai/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, Your Name</rights>
+  <subtitle>记录生活与学习</subtitle>
+  <title>我的博客</title>
+  <updated>2026-03-24T12:34:22.856Z</updated>
+  <entry>
+    <author>
+      <name>Your Name</name>
+    </author>
+    <category term="随笔" scheme="https://smileyoyo.github.io/Xguai/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="生活" scheme="https://smileyoyo.github.io/Xguai/tags/%E7%94%9F%E6%B4%BB/"/>
+    <category term="博客" scheme="https://smileyoyo.github.io/Xguai/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <content>
+      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>欢迎来到我的博客！这是我使用 Hexo + Butterfly 主题搭建的第一篇文章。</p><h2 id="为什么搭建博客？"><a href="#为什么搭建博客？" class="headerlink" title="为什么搭建博客？"></a>为什么搭建博客？</h2><p>搭建个人博客有很多好处：</p><ol><li><strong>记录学习</strong>: 记录学习过程中的知识点和心得体会</li><li><strong>分享经验</strong>: 将自己的经验分享给他人，帮助更多的人</li><li><strong>建立个人品牌</strong>: 长期坚持写作，可以建立自己的个人品牌</li><li><strong>结交朋友</strong>: 通过博客可以结识更多志同道合的朋友</li></ol><h2 id="关于本博客"><a href="#关于本博客" class="headerlink" title="关于本博客"></a>关于本博客</h2><p>本博客使用了以下技术：</p><ul><li><strong>Hexo</strong>: 一个快速、简洁且高效的博客框架</li><li><strong>Butterfly</strong>: 一款美观、功能丰富的 Hexo 主题</li><li><strong>GitHub Pages</strong>: 免费的静态网站托管服务</li></ul><h2 id="后续计划"><a href="#后续计划" class="headerlink" title="后续计划"></a>后续计划</h2><p>接下来，我会在博客中分享：</p><ul><li>技术学习笔记</li><li>项目实战经验</li><li>生活随笔</li><li>资源分享</li></ul><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>感谢您的访问！如果您有任何问题或建议，欢迎在评论区留言。</p><hr><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这是一个代码块示例</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, World!&quot;</span>)</span><br></pre></td></tr></table></figure><blockquote><p>这是一段引用示例</p></blockquote><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul><li><a href="https://hexo.io/zh-cn/">Hexo 官方文档</a></li><li><a href="https://butterfly.js.org/">Butterfly 主题文档</a></li><li><a href="https://pages.github.com/">GitHub Pages</a></li></ul>]]>
+    </content>
+    <id>https://smileyoyo.github.io/Xguai/posts/57a1ada1/</id>
+    <link href="https://smileyoyo.github.io/Xguai/posts/57a1ada1/"/>
+    <published>2024-03-24T12:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>欢迎来到我的博客！这是我使用 Hexo + Butterfly 主题搭建的第一篇文章。</p>
+<h2 id="为什么搭建博客？"><a h]]>
+    </summary>
+    <title>Hello World - 我的第一篇博客</title>
+    <updated>2026-03-24T12:34:22.856Z</updated>
+  </entry>
+</feed>

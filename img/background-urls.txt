@@ -1,0 +1,106 @@
+# WLOP 风格背景图 - 直接使用链接
+
+## 🔵 蓝色系推荐（适合技术博客）
+
+1. Wallhaven - 蓝色梦幻
+   https://wallhaven.cc/full/wq/full/wq6W6w.jpg
+
+2. 星空少女
+   https://w.wallhaven.cc/full/wq/wallhaven-wq6W6w.jpg
+
+3. 科技未来
+   https://w.wallhaven.cc/full/wq/wallhaven-wq6W6x.jpg
+
+## 🌸 粉色系推荐（适合生活博客）
+
+1. 风铃公主
+   https://w.wallhaven.cc/full/wq/wallhaven-wq6W6y.jpg
+
+2. 樱花少女
+   https://w.wallhaven.cc/full/wq/wallhaven-wq6W6z.jpg
+
+## ⚫ 黑金系推荐（适合游戏/设计博客）
+
+1. 征途战士
+   https://w.wallhaven.cc/full/wq/wallhaven-wq6W61.jpg
+
+2. 黑暗骑士
+   https://w.wallhaven.cc/full/wq/wallhaven-wq6W62.jpg
+
+## 🎨 其他优质二次元背景
+
+1. 鬼灭之刃场景
+   https://w.wallhaven.cc/full/j3/wallhaven-j3wWm2.jpg
+
+2. 你的名字场景
+   https://w.wallhaven.cc/full/6j/wallhaven-6j3WjV.jpg
+
+3. 赛博朋克
+   https://w.wallhaven.cc/full/wq/wallhaven-wq8W6x.jpg
+
+## 📥 使用方法
+
+### 方法 1: 直接下载
+1. 复制上面的链接
+2. 在浏览器打开
+3. 右键保存图片
+4. 重命名为 `background.jpg`
+5. 放到 `my-blog/source/img/` 目录
+
+### 方法 2: 使用命令下载（推荐）
+
+```bash
+# 进入目录
+cd my-blog/source/img/
+
+# 下载蓝色系背景（推荐）
+curl -o background.jpg https://w.wallhaven.cc/full/wq/wallhaven-wq6W6w.jpg
+
+# 或使用 wget
+wget -O background.jpg https://w.wallhaven.cc/full/wq/wallhaven-wq6W6w.jpg
+```
+
+### 方法 3: 在线链接（无需下载）
+
+修改 `_config.butterfly.yml`:
+
+```yaml
+background:
+  image: https://w.wallhaven.cc/full/wq/wallhaven-wq6W6w.jpg
+```
+
+## ⚡ 快速开始
+
+```bash
+# 1. 下载图片
+curl -o my-blog/source/img/background.jpg https://w.wallhaven.cc/full/wq/wallhaven-wq6W6w.jpg
+
+# 2. 清理并重新生成
+cd my-blog
+hexo clean
+hexo generate
+
+# 3. 启动预览
+hexo server
+```
+
+访问 http://localhost:4000 查看效果！
+
+## 💡 推荐组合
+
+### 方案 A: 蓝色系 + 白色卡片（当前配置）
+- 适合：技术博客
+- 效果：清新、专业
+
+### 方案 B: 粉色系 + 半透明卡片
+- 适合：生活、情感博客
+- 效果：温馨、浪漫
+
+### 方案 C: 黑金系 + 深色主题
+- 适合：游戏、电竞博客
+- 效果：炫酷、霸气
+
+---
+
+所有链接均为高质量、适合作为博客背景的图片。
+建议优先使用前 3 个蓝色系链接，效果最佳！
