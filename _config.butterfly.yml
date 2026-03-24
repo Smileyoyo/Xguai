@@ -1,0 +1,122 @@
+# Hexo Theme Butterfly
+# 作者：Jerry
+# 官方文档：https://butterfly.js.org/
+
+# 导航菜单
+menu:
+  首页: / || fas fa-home
+  文章归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  关于: /about/ || fas fa-user
+
+# 搜索
+local_search:
+  enable: true
+  preload: true
+
+# 代码高亮
+highlight_theme: mac light
+highlight_copy: true
+highlight_lang: true
+highlight_shrink: false
+highlight_height_limit: false
+
+# 一言
+# 随机显示一句话
+# 随机文章
+# 相关文章推荐
+# 评论系统（可选择配置 Waline, Gitalk, Twikoo 等）
+# 友链
+# 页脚设置
+footer:
+  owner:
+    enable: true
+    since: 2024
+  custom_text: Hi, welcome to my blog!
+
+# 侧边栏
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true # 在手机上显示
+  position: right # 左侧或右侧
+  display:
+    post: true # 文章页显示
+    archive: true # 归档页显示
+    index: true # 首页显示
+  card_author:
+    enable: true
+    description:
+      Hi, welcome to my blog!
+    button:
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/username
+  card_announcement:
+    enable: true
+    content: 这是我基于 Hexo + Butterfly 搭建的博客
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: updated
+    sort_order: false
+
+# 图片懒加载
+lazyload:
+  enable: true
+  onlypost: false
+  loadingImg:
+
+# CDN配置
+CDN:
+  css:
+    - /css/index.css
+  js:
+
+# 样式自定义
+inject:
+  head:
+    # - <link rel="stylesheet" href="/custom.css">
+  bottom:
+    # - <script src="/custom.js"></script>
+
+# 动画
+animate:
+  enable: true
+  transition: 30 # 全局过渡时间
+
+# 网站图标
+icon:
+  Logo: /img/logo.png
+  FavIcon: /img/logo.png
+
+# 头像
+avatar:
+  img: /img/avatar.png
+  effect: false
+
+# 网站背景
+background:
+  # 背景颜色
+  color: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)
+
+# 顶部图
+index_top_img_height: # 首页顶部图高度
+
+# 分享
+share:
+  enable: true
+
+# 评论
+comments:
+  use: false # 关闭评论，如需开启可选择 Waline, Twikoo 等
+
+# 部署相关设置
+# 访问统计
+busuanzi:
+  enable: true
+  site_uv: true
+  site_pv: true
+  page_pv: true
