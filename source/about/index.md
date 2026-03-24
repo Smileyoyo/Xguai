@@ -24,8 +24,8 @@ type: about
 
 ## 联系方式
 
-- GitHub: [Your GitHub](https://github.com/username)
-- Email: your.email@example.com
+- GitHub: [Xguai](https://github.com/Xguai)
+- Email: [562726711@qq.com](mailto:562726711@qq.com)
 
 ## 版权声明
 

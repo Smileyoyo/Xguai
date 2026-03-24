@@ -54,6 +54,9 @@ aside:
       icon: fab fa-github
       text: Follow Me
       link: https://github.com/Xguai
+    social:
+      github: https://github.com/Xguai
+      email: 562726711@qq.com
   card_announcement:
     enable: true
     content: 这是我基于 Hexo + Butterfly 搭建的博客
