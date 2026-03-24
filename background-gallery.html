@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLOP 背景图选择器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-desc {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .tag-blue { background: #e3f2fd; color: #1976d2; }
+        .tag-pink { background: #fce4ec; color: #c2185b; }
+        .tag-dark { background: #424242; color: #fff; }
+        .tag-rec { background: #4caf50; color: #fff; }
+
+        .download-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .instructions {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .instructions h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            line-height: 2;
+            color: #555;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        .instructions code {
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e91e63;
+        }
+
+        .tip {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            color: #856404;
+        }
+
+        .tip::before {
+            content: "💡 ";
+            font-size: 1.2em;
+        }
+
+        .featured {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff5722;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(255, 87, 34, 0.5);
+        }
+
+        .card {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 WLOP 动态背景图选择器</h1>
+        <p class="subtitle">为你的 Hexo + Butterfly 博客选择完美的二次元背景</p>
+
+        <div class="gallery">
+            <div class="card">
+                <span class="featured">⭐ 推荐</span>
+                <img src="https://wallhaven.cc/full/wq/wallhaven-wq6W6w.jpg"
+                     onerror="this.src='https://via.placeholder.com/600x300/1E90FF/ffffff?text=蓝色+梦幻'">
+                <div class="card-info">
+                    <div class="card-title">🔵 蓝色梦幻</div>
+                    <div class="card-desc">WLOP 经典蓝色系作品，梦幻星空背景，适合技术博客</div>
+                    <div class="card-tags">
+                        <span class="tag tag-blue">蓝色系</span>
+                        <span class="tag tag-rec">推荐</span>
+                        <span class="tag tag-dark">1920x1080</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadImage('https://wallhaven.cc/full/wq/wallhaven-wq6W6w.jpg', 'background.jpg')">
+                        📥 下载此背景
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://wallhaven.cc/full/wq/wallhaven-wq6W6x.jpg"
+                     onerror="this.src='https://via.placeholder.com/600x300/4169E1/ffffff?text=星空+少女'">
+                <div class="card-info">
+                    <div class="card-title">✨ 星空少女</div>
+                    <div class="card-desc">深邃星空背景，神秘优雅，适合个人博客</div>
+                    <div class="card-tags">
+                        <span class="tag tag-blue">蓝色系</span>
+                        <span class="tag tag-dark">星空</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadImage('https://wallhaven.cc/full/wq/wallhaven-wq6W6x.jpg', 'background.jpg')">
+                        📥 下载此背景
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://wallhaven.cc/full/wq/wallhaven-wq6W6z.jpg"
+                     onerror="this.src='https://via.placeholder.com/600x300/FF69B4/ffffff?text=风铃+公主'">
+                <div class="card-info">
+                    <div class="card-title">🌸 风铃公主</div>
+                    <div class="card-desc">粉色系温馨风格，适合生活、情感博客</div>
+                    <div class="card-tags">
+                        <span class="tag tag-pink">粉色系</span>
+                        <span class="tag tag-rec">热门</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadImage('https://wallhaven.cc/full/wq/wallhaven-wq6W6z.jpg', 'background.jpg')">
+                        📥 下载此背景
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://wallhaven.cc/full/wq/wallhaven-wq6W62.jpg"
+                     onerror="this.src='https://via.placeholder.com/600x300/000000/FFD700?text=征途+战士'">
+                <div class="card-info">
+                    <div class="card-title">⚫ 征途战士</div>
+                    <div class="card-desc">黑金配色霸气风格，适合游戏、电竞博客</div>
+                    <div class="card-tags">
+                        <span class="tag tag-dark">黑金系</span>
+                        <span class="tag tag-blue">霸气</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadImage('https://wallhaven.cc/full/wq/wallhaven-wq6W62.jpg', 'background.jpg')">
+                        📥 下载此背景
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>📖 使用说明</h2>
+            <ol>
+                <li>点击上面的 <strong>"📥 下载此背景"</strong> 按钮</li>
+                <li>将下载的图片重命名为 <code>background.jpg</code></li>
+                <li>将图片放置到项目目录：<code>my-blog/source/img/background.jpg</code></li>
+                <li>在项目根目录运行命令：
+                    <br><code>hexo clean && hexo generate && hexo server</code>
+                </li>
+                <li>打开浏览器访问：<code>http://localhost:4000</code></li>
+            </ol>
+
+            <div class="tip">
+                <strong>提示：</strong>如果图片加载失败，可能是网络问题。请稍后重试，或直接在浏览器中打开链接下载。
+            </div>
+
+            <div class="tip" style="background: #d1ecf1; border-left-color: #17a2b8; color: #0c5460;">
+                <strong>高级玩法：</strong>你可以下载多张背景图，定期更换，让博客保持新鲜感！
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadImage(url, filename) {
+            // 在新窗口打开图片
+            const win = window.open(url, '_blank');
+
+            // 提示用户保存
+            setTimeout(() => {
+                alert('图片已在新窗口打开！\n\n请右键点击图片 → "图片另存为"\n保存为: ' + filename + '\n\n然后放到 my-blog/source/img/ 目录');
+            }, 500);
+        }
+
+        // 添加页面加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>

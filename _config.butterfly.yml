@@ -53,7 +53,7 @@ aside:
     button:
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/username
+      link: https://github.com/Xguai
   card_announcement:
     enable: true
     content: 这是我基于 Hexo + Butterfly 搭建的博客
@@ -78,7 +78,7 @@ CDN:
 # 样式自定义
 inject:
   head:
-    # - <link rel="stylesheet" href="/custom.css">
+    - <link rel="stylesheet" href="/css/custom.css">
   bottom:
     # - <script src="/custom.js"></script>
 
@@ -99,8 +99,16 @@ avatar:
 
 # 网站背景
 background:
-  # 背景颜色
+  # 背景图片 - WLOP 风格插画
+  image: /img/background.jpg
+  # 背景颜色（备用）
   color: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)
+  # 背景样式
+  background_size: cover
+  background_position: center
+  background_repeat: no-repeat
+  # 固定背景（滚动时背景不动）
+  fixed: true
 
 # 顶部图
 index_top_img_height: # 首页顶部图高度
