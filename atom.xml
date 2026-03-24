@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <author>
-    <name>Your Name</name>
+    <name>Xguai</name>
   </author>
   <generator uri="https://hexo.io/">Hexo</generator>
   <id>https://smileyoyo.github.io/Xguai/</id>
   <link href="https://smileyoyo.github.io/Xguai/" rel="alternate"/>
   <link href="https://smileyoyo.github.io/Xguai/atom.xml" rel="self"/>
-  <rights>All rights reserved 2026, Your Name</rights>
+  <rights>All rights reserved 2026, Xguai</rights>
   <subtitle>记录生活与学习</subtitle>
-  <title>我的博客</title>
+  <title>Xguai的博客</title>
   <updated>2026-03-24T12:34:22.856Z</updated>
   <entry>
     <author>
-      <name>Your Name</name>
+      <name>Xguai</name>
     </author>
     <category term="随笔" scheme="https://smileyoyo.github.io/Xguai/categories/%E9%9A%8F%E7%AC%94/"/>
     <category term="生活" scheme="https://smileyoyo.github.io/Xguai/tags/%E7%94%9F%E6%B4%BB/"/>
