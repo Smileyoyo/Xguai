@@ -109,5 +109,5 @@ theme: butterfly
 ## repository 格式：username/username.github.io
 deploy:
   type: git
-  repo: https://github.com/Smileyoyo/Xguai.git
-  branch: main
+  repo: git@github.com:Smileyoyo/Xguai.git
+  branch: gh-pages
