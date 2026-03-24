@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -30,14 +30,29 @@ jobs:
           npm install
           npm install hexo-renderer-pug hexo-renderer-stylus --save
 
+      - name: Verify theme exists
+        run: |
+          echo "Checking themes directory..."
+          ls -la themes/
+          echo "Checking butterfly theme..."
+          ls -la themes/butterfly/ | head -20
+          echo "Checking for layout folder..."
+          ls -la themes/butterfly/layout/ | head -10
+
       - name: Build
         run: npm run build
         env:
           NODE_ENV: production
+
+      - name: Verify output
+        run: |
+          echo "Checking public directory..."
+          ls -la public/ | head -20
+          echo "Checking index.html..."
+          test -f public/index.html && echo "✓ index.html exists" || echo "✗ index.html missing"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          cname:
