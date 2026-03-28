@@ -1,0 +1,552 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Xguai的博客 | Xguai的博客</title><meta name="author" content="Xguai"><meta name="copyright" content="Xguai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="WLOP 背景图选择器              * {             margin: 0;             padding: 0;             box-sizing: border-box;         }          body {             font-family: &#39;Segoe UI&#39;, Tahoma,">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Xguai的博客">
+<meta property="og:url" content="https://smileyoyo.github.io/Xguai/background-gallery.html">
+<meta property="og:site_name" content="Xguai的博客">
+<meta property="og:description" content="WLOP 背景图选择器              * {             margin: 0;             padding: 0;             box-sizing: border-box;         }          body {             font-family: &#39;Segoe UI&#39;, Tahoma,">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://smileyoyo.github.io/Xguai/img/avatar.png">
+<meta property="article:published_time" content="2026-03-28T03:28:43.630Z">
+<meta property="article:modified_time" content="2026-03-28T03:28:43.630Z">
+<meta property="article:author" content="Xguai">
+<meta property="article:tag" content="博客,技术,生活,学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://smileyoyo.github.io/Xguai/img/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/Xguai/img/favicon.png"><link rel="canonical" href="https://smileyoyo.github.io/Xguai/background-gallery.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/Xguai/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/Xguai/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Xguai的博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/Xguai/atom.xml" title="Xguai的博客" type="application/atom+xml">
+</head><body><div class="bg-animation" id="web_bg" style="background: [object Object];"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/Xguai/img/avatar.png" onerror="this.onerror=null;this.src='/Xguai/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/Xguai/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/Xguai/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/Xguai/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/Xguai/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/Xguai/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章归档</span></a></div><div class="menus_item"><a class="site-page" href="/Xguai/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/Xguai/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Xguai/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/Xguai/"><span class="site-name">Xguai的博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/Xguai/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/Xguai/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章归档</span></a></div><div class="menus_item"><a class="site-page" href="/Xguai/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/Xguai/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Xguai/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title"></h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLOP 背景图选择器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-desc {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .tag-blue { background: #e3f2fd; color: #1976d2; }
+        .tag-pink { background: #fce4ec; color: #c2185b; }
+        .tag-dark { background: #424242; color: #fff; }
+        .tag-rec { background: #4caf50; color: #fff; }
+
+        .download-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .instructions {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .instructions h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            line-height: 2;
+            color: #555;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        .instructions code {
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e91e63;
+        }
+
+        .tip {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            color: #856404;
+        }
+
+        .tip::before {
+            content: "💡 ";
+            font-size: 1.2em;
+        }
+
+        .featured {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff5722;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(255, 87, 34, 0.5);
+        }
+
+        .card {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 WLOP 动态背景图选择器</h1>
+        <p class="subtitle">为你的 Hexo + Butterfly 博客选择完美的二次元背景</p>
+
+        <div class="gallery">
+            <div class="card">
+                <span class="featured">⭐ 推荐</span>
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://wallhaven.cc/full/wq/wallhaven-wq6W6w.jpg"
+                     onerror="this.src='https://via.placeholder.com/600x300/1E90FF/ffffff?text=蓝色+梦幻'">
+                <div class="card-info">
+                    <div class="card-title">🔵 蓝色梦幻</div>
+                    <div class="card-desc">WLOP 经典蓝色系作品，梦幻星空背景，适合技术博客</div>
+                    <div class="card-tags">
+                        <span class="tag tag-blue">蓝色系</span>
+                        <span class="tag tag-rec">推荐</span>
+                        <span class="tag tag-dark">1920x1080</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadImage('https://wallhaven.cc/full/wq/wallhaven-wq6W6w.jpg', 'background.jpg')">
+                        📥 下载此背景
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://wallhaven.cc/full/wq/wallhaven-wq6W6x.jpg"
+                     onerror="this.src='https://via.placeholder.com/600x300/4169E1/ffffff?text=星空+少女'">
+                <div class="card-info">
+                    <div class="card-title">✨ 星空少女</div>
+                    <div class="card-desc">深邃星空背景，神秘优雅，适合个人博客</div>
+                    <div class="card-tags">
+                        <span class="tag tag-blue">蓝色系</span>
+                        <span class="tag tag-dark">星空</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadImage('https://wallhaven.cc/full/wq/wallhaven-wq6W6x.jpg', 'background.jpg')">
+                        📥 下载此背景
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://wallhaven.cc/full/wq/wallhaven-wq6W6z.jpg"
+                     onerror="this.src='https://via.placeholder.com/600x300/FF69B4/ffffff?text=风铃+公主'">
+                <div class="card-info">
+                    <div class="card-title">🌸 风铃公主</div>
+                    <div class="card-desc">粉色系温馨风格，适合生活、情感博客</div>
+                    <div class="card-tags">
+                        <span class="tag tag-pink">粉色系</span>
+                        <span class="tag tag-rec">热门</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadImage('https://wallhaven.cc/full/wq/wallhaven-wq6W6z.jpg', 'background.jpg')">
+                        📥 下载此背景
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://wallhaven.cc/full/wq/wallhaven-wq6W62.jpg"
+                     onerror="this.src='https://via.placeholder.com/600x300/000000/FFD700?text=征途+战士'">
+                <div class="card-info">
+                    <div class="card-title">⚫ 征途战士</div>
+                    <div class="card-desc">黑金配色霸气风格，适合游戏、电竞博客</div>
+                    <div class="card-tags">
+                        <span class="tag tag-dark">黑金系</span>
+                        <span class="tag tag-blue">霸气</span>
+                    </div>
+                    <button class="download-btn" onclick="downloadImage('https://wallhaven.cc/full/wq/wallhaven-wq6W62.jpg', 'background.jpg')">
+                        📥 下载此背景
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>📖 使用说明</h2>
+            <ol>
+                <li>点击上面的 <strong>"📥 下载此背景"</strong> 按钮</li>
+                <li>将下载的图片重命名为 <code>background.jpg</code></li>
+                <li>将图片放置到项目目录：<code>my-blog/source/img/background.jpg</code></li>
+                <li>在项目根目录运行命令：
+                    <br><code>hexo clean && hexo generate && hexo server</code>
+                </li>
+                <li>打开浏览器访问：<code>http://localhost:4000</code></li>
+            </ol>
+
+            <div class="tip">
+                <strong>提示：</strong>如果图片加载失败，可能是网络问题。请稍后重试，或直接在浏览器中打开链接下载。
+            </div>
+
+            <div class="tip" style="background: #d1ecf1; border-left-color: #17a2b8; color: #0c5460;">
+                <strong>高级玩法：</strong>你可以下载多张背景图，定期更换，让博客保持新鲜感！
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadImage(url, filename) {
+            // 在新窗口打开图片
+            const win = window.open(url, '_blank');
+
+            // 提示用户保存
+            setTimeout(() => {
+                alert('图片已在新窗口打开！\n\n请右键点击图片 → "图片另存为"\n保存为: ' + filename + '\n\n然后放到 my-blog/source/img/ 目录');
+            }, 500);
+        }
+
+        // 添加页面加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/Xguai/img/avatar.png" onerror="this.onerror=null;this.src='/Xguai/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Xguai</div><div class="author-info-description">Hi, welcome to my blog!</div><div class="site-data"><a href="/Xguai/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/Xguai/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/Xguai/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Smileyoyo"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是我基于 Hexo + Butterfly 搭建的博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Xguai/posts/57a1ada1/" title="Hello World - 我的第一篇博客">Hello World - 我的第一篇博客</a><time datetime="2026-03-28T03:14:17.601Z" title="更新于 2026年3月24日 20:36:20">2026年3月24日</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Xguai/posts/57a1ada1/" title="编码工具助手：一键安装与配置指南">编码工具助手：一键安装与配置指南</a><time datetime="2026-03-28T03:10:08.285Z" title="更新于 2026年3月24日 20:36:20">2026年3月24日</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/Xguai/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">技术教程</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/Xguai/categories/%E9%9A%8F%E7%AC%94/"><span class="card-category-list-name">随笔</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/Xguai/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 1.1em; color: #999">生活</a> <a href="/Xguai/tags/Claude-Code/" style="font-size: 1.1em; color: #999">Claude Code</a> <a href="/Xguai/tags/MCP/" style="font-size: 1.1em; color: #999">MCP</a> <a href="/Xguai/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: #999">开发工具</a> <a href="/Xguai/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">博客</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/Xguai/archives/2026/03/">
+            <span class="card-archive-list-date">
+              三月 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-03-28T03:28:46.094Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By Xguai</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div><div class="footer_custom_text">Hi, welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/Xguai/js/utils.js?v=5.5.4"></script><script src="/Xguai/js/main.js?v=5.5.4"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><div id="bg-switch-btn" title="切换背景图">
+  <i class="fas fa-image"></i>
+</div>
+<script>
+  (function() {
+    const btn = document.getElementById('bg-switch-btn');
+    let isDragging = false;
+    let startX, startY, initialX, initialY;
+    const defaultX = window.innerWidth - 70;
+    const defaultY = window.innerHeight / 2;
+
+    btn.style.right = defaultX + 'px';
+    btn.style.top = defaultY + 'px';
+
+    btn.addEventListener('mousedown', function(e) {
+      isDragging = true;
+      startX = e.clientX;
+      startY = e.clientY;
+      const rect = btn.getBoundingClientRect();
+      initialX = rect.left;
+      initialY = rect.top;
+      btn.style.cursor = 'grabbing';
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (!isDragging) return;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      btn.style.left = (initialX + dx) + 'px';
+      btn.style.top = (initialY + dy) + 'px';
+      btn.style.right = 'auto';
+    });
+
+    document.addEventListener('mouseup', function() {
+      isDragging = false;
+      btn.style.cursor = 'grab';
+    });
+
+    btn.addEventListener('click', function(e) {
+      if (!isDragging) {
+        window.location.href = '/background-gallery.html';
+      }
+    });
+  })();
+</script>
+<style>
+  #bg-switch-btn {
+    position: fixed;
+    right: 70px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+    font-size: 20px;
+    user-select: none;
+  }
+  #bg-switch-btn:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+</style>
+<script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
