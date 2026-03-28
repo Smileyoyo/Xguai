@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World - 我的第一篇博客</title>
+    <url>/Xguai/posts/57a1ada1/</url>
+    <content><![CDATA[前言欢迎来到我的博客！这是我使用 Hexo + Butterfly 主题搭建的第一篇文章。
+为什么搭建博客？搭建个人博客有很多好处：
+
+记录学习: 记录学习过程中的知识点和心得体会
+分享经验: 将自己的经验分享给他人，帮助更多的人
+建立个人品牌: 长期坚持写作，可以建立自己的个人品牌
+结交朋友: 通过博客可以结识更多志同道合的朋友
+
+关于本博客本博客使用了以下技术：
+
+Hexo: 一个快速、简洁且高效的博客框架
+Butterfly: 一款美观、功能丰富的 Hexo 主题
+GitHub Pages: 免费的静态网站托管服务
+
+后续计划接下来，我会在博客中分享：
+
+技术学习笔记
+项目实战经验
+生活随笔
+资源分享
+
+结语感谢您的访问！如果您有任何问题或建议，欢迎在评论区留言。
+
+# 这是一个代码块示例print(&quot;Hello, World!&quot;)
+
+
+这是一段引用示例
+
+链接
+Hexo 官方文档
+Butterfly 主题文档
+GitHub Pages
+
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>编码工具助手：一键安装与配置指南</title>
     <url>/Xguai/posts/57a1ada1/</url>
     <content><![CDATA[前言在日常开发中，配置编码环境、管理 MCP 服务器和插件市场往往耗费不少精力。今天为大家介绍一款实用的工具——Coding Tool Helper（一键安装助手），它能帮助我们快速将 GLM 编码器安装到常用的编码工具中，简化配置流程。
@@ -90,51 +135,6 @@ Windows 用户手册
         <tag>开发工具</tag>
         <tag>MCP</tag>
         <tag>Claude Code</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World - 我的第一篇博客</title>
-    <url>/Xguai/posts/57a1ada1/</url>
-    <content><![CDATA[前言欢迎来到我的博客！这是我使用 Hexo + Butterfly 主题搭建的第一篇文章。
-为什么搭建博客？搭建个人博客有很多好处：
-
-记录学习: 记录学习过程中的知识点和心得体会
-分享经验: 将自己的经验分享给他人，帮助更多的人
-建立个人品牌: 长期坚持写作，可以建立自己的个人品牌
-结交朋友: 通过博客可以结识更多志同道合的朋友
-
-关于本博客本博客使用了以下技术：
-
-Hexo: 一个快速、简洁且高效的博客框架
-Butterfly: 一款美观、功能丰富的 Hexo 主题
-GitHub Pages: 免费的静态网站托管服务
-
-后续计划接下来，我会在博客中分享：
-
-技术学习笔记
-项目实战经验
-生活随笔
-资源分享
-
-结语感谢您的访问！如果您有任何问题或建议，欢迎在评论区留言。
-
-# 这是一个代码块示例print(&quot;Hello, World!&quot;)
-
-
-这是一段引用示例
-
-链接
-Hexo 官方文档
-Butterfly 主题文档
-GitHub Pages
-
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
