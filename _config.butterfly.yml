@@ -83,7 +83,34 @@ inject:
   head:
     - <link rel="stylesheet" href="/css/custom.css">
   bottom:
-    # - <script src="/custom.js"></script>
+    - |
+      <div id="bg-switch-btn" onclick="window.open('/background-gallery.html', '_blank')">
+        <i class="fas fa-image"></i>
+      </div>
+      <style>
+        #bg-switch-btn {
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          z-index: 9999;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+          transition: all 0.3s ease;
+          font-size: 20px;
+        }
+        #bg-switch-btn:hover {
+          transform: scale(1.1);
+          box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+      </style>
 
 # 动画
 animate:
@@ -103,7 +130,7 @@ avatar:
 # 网站背景
 background:
   # 背景图片 - WLOP 风格插画
-  image: ./img/background.jpg
+  image: /img/background.jpg
   # 背景颜色（备用）
   color: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)
   # 背景样式
