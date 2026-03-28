@@ -84,14 +84,56 @@ inject:
     - <link rel="stylesheet" href="/css/custom.css">
   bottom:
     - |
-      <div id="bg-switch-btn" onclick="window.open('/background-gallery.html', '_blank')">
+      <div id="bg-switch-btn" title="切换背景图">
         <i class="fas fa-image"></i>
       </div>
+      <script>
+        (function() {
+          const btn = document.getElementById('bg-switch-btn');
+          let isDragging = false;
+          let startX, startY, initialX, initialY;
+          const defaultX = window.innerWidth - 70;
+          const defaultY = window.innerHeight / 2;
+
+          btn.style.right = defaultX + 'px';
+          btn.style.top = defaultY + 'px';
+
+          btn.addEventListener('mousedown', function(e) {
+            isDragging = true;
+            startX = e.clientX;
+            startY = e.clientY;
+            const rect = btn.getBoundingClientRect();
+            initialX = rect.left;
+            initialY = rect.top;
+            btn.style.cursor = 'grabbing';
+          });
+
+          document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            const dx = e.clientX - startX;
+            const dy = e.clientY - startY;
+            btn.style.left = (initialX + dx) + 'px';
+            btn.style.top = (initialY + dy) + 'px';
+            btn.style.right = 'auto';
+          });
+
+          document.addEventListener('mouseup', function() {
+            isDragging = false;
+            btn.style.cursor = 'grab';
+          });
+
+          btn.addEventListener('click', function(e) {
+            if (!isDragging) {
+              window.location.href = '/background-gallery.html';
+            }
+          });
+        })();
+      </script>
       <style>
         #bg-switch-btn {
           position: fixed;
-          top: 20px;
-          left: 20px;
+          right: 70px;
+          top: 50%;
           width: 50px;
           height: 50px;
           border-radius: 50%;
@@ -100,14 +142,14 @@ inject:
           display: flex;
           align-items: center;
           justify-content: center;
-          cursor: pointer;
+          cursor: grab;
           z-index: 9999;
           box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-          transition: all 0.3s ease;
+          transition: box-shadow 0.3s ease;
           font-size: 20px;
+          user-select: none;
         }
         #bg-switch-btn:hover {
-          transform: scale(1.1);
           box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
       </style>
