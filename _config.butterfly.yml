@@ -32,7 +32,7 @@ highlight_height_limit: false
 footer:
   owner:
     enable: true
-    since: 2024
+    since: 2026
   custom_text: Hi, welcome to my blog!
 
 # 侧边栏
@@ -53,9 +53,9 @@ aside:
     button:
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/Xguai
+      link: https://github.com/Smileyoyo
     social:
-      github: https://github.com/Xguai
+      github: https://github.com/Smileyoyo
       email: 562726711@qq.com
   card_announcement:
     enable: true
@@ -103,7 +103,7 @@ avatar:
 # 网站背景
 background:
   # 背景图片 - WLOP 风格插画
-  image: /img/background.jpg
+  image: ./img/background.jpg
   # 背景颜色（备用）
   color: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)
   # 背景样式
