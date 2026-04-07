@@ -2,8 +2,17 @@
 title: reademe
 date: 2026-04-07 13:49:55
 tags:
+  - 教学
+categories:
+  - 使用说明
+toc: true
+abbrlink: reademe
+date: 2026-03-24 20:00:00
+top_img:
+cover:
+password:
 ---
-# 我的博客
+## 我的博客
 
 一个基于 [Hexo](https://hexo.io/) + [Butterfly](https://github.com/jerryc127/hexo-theme-butterfly) 主题的个人博客，部署在 [GitHub Pages](https://pages.github.com/) 上。
 
