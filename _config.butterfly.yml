@@ -191,7 +191,7 @@ share:
 
 # 评论
 comments:
-  use: false # 关闭评论，如需开启可选择 Waline, Twikoo 等
+  use: Waline # 关闭评论，如需开启可选择 Waline, Twikoo 等
 
 # 部署相关设置
 # 访问统计
