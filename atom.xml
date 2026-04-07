@@ -10,7 +10,27 @@
   <rights>All rights reserved 2026, Xguai</rights>
   <subtitle>记录生活与学习</subtitle>
   <title>Xguai的博客</title>
-  <updated>2026-03-28T03:10:08.285Z</updated>
+  <updated>2026-04-07T06:02:37.075Z</updated>
+  <entry>
+    <author>
+      <name>Xguai</name>
+    </author>
+    <category term="使用说明" scheme="https://smileyoyo.github.io/Xguai/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
+    <category term="Hexo" scheme="https://smileyoyo.github.io/Xguai/tags/Hexo/"/>
+    <category term="Butterfly" scheme="https://smileyoyo.github.io/Xguai/tags/Butterfly/"/>
+    <category term="博客搭建" scheme="https://smileyoyo.github.io/Xguai/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <content>
+      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>搭建个人博客是许多开发者的选择，但配置过程往往需要查阅大量文档。今天为大家介绍一套成熟的博客方案——<strong>Hexo + Butterfly</strong>，它能帮助我们快速搭建一个功能完善、外观美观的个人博客，简化配置流程。</p><h2 id="工具简介"><a href="#工具简介" class="headerlink" title="工具简介"></a>工具简介</h2><p>这是一个基于 <a href="https://hexo.io/">Hexo</a> 静态博客框架和 <a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a> 主题构建的个人博客系统，部署在 <a href="https://pages.github.com/">GitHub Pages</a> 上。安装并配置完成后，即可拥有一个功能完整的个人博客。</p><h3 id="当前支持的功能"><a href="#当前支持的功能" class="headerlink" title="当前支持的功能"></a>当前支持的功能</h3><ul><li><strong>文章发布与管理</strong></li><li><strong>标签与分类</strong></li><li><strong>本地搜索</strong></li><li><strong>响应式设计</strong></li><li><strong>暗黑模式</strong></li><li><strong>评论区支持</strong></li><li><strong>友链管理</strong></li><li><strong>网站统计</strong></li></ul><h2 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h2><table><thead><tr><th>功能</th><th>说明</th></tr></thead><tbody><tr><td>交互式向导</td><td>提供便捷的配置向导，帮助新手轻松上手</td></tr><tr><td>多语言支持</td><td>支持多种语言，满足不同用户需求</td></tr><tr><td>主题定制</td><td>支持丰富的主题自定义选项</td></tr><tr><td>插件生态</td><td>拥有丰富的插件市场，可按需扩展功能</td></tr></tbody></table><h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><ul><li>Node.js &gt;&#x3D; 14</li><li>Git</li></ul><h3 id="本地运行步骤"><a href="#本地运行步骤" class="headerlink" title="本地运行步骤"></a>本地运行步骤</h3><ol><li>克隆或下载博客源码</li><li>在项目根目录打开终端</li><li>执行以下命令：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动本地服务器</span></span><br><span class="line">npm run server</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure><ol start="4"><li>访问 <code>http://localhost:4000</code> 预览博客</li></ol><h2 id="常见问题与解决方案"><a href="#常见问题与解决方案" class="headerlink" title="常见问题与解决方案"></a>常见问题与解决方案</h2><h3 id="问题1：本地服务器启动失败？"><a href="#问题1：本地服务器启动失败？" class="headerlink" title="问题1：本地服务器启动失败？"></a>问题1：本地服务器启动失败？</h3><p><strong>解决方案：</strong></p><ol><li>检查 Node.js 版本是否 &gt;&#x3D; 14</li><li>删除 <code>node_modules</code> 文件夹，重新执行 <code>npm install</code></li><li>检查端口 4000 是否被占用</li></ol><h3 id="问题2：部署到-GitHub-Pages-后样式丢失？"><a href="#问题2：部署到-GitHub-Pages-后样式丢失？" class="headerlink" title="问题2：部署到 GitHub Pages 后样式丢失？"></a>问题2：部署到 GitHub Pages 后样式丢失？</h3><p><strong>解决方案：</strong></p><ol><li>检查 <code>_config.yml</code> 中的 <code>url</code> 配置是否正确</li><li>确保 <code>root</code> 配置为 <code>/</code></li><li>清除浏览器缓存后重新访问</li></ol><h3 id="问题3：中文乱码或显示异常？"><a href="#问题3：中文乱码或显示异常？" class="headerlink" title="问题3：中文乱码或显示异常？"></a>问题3：中文乱码或显示异常？</h3><p><strong>解决方案：</strong></p><ol><li>检查 <code>_config.yml</code> 中的 <code>language</code> 是否设置为 <code>zh-CN</code></li><li>确保 Markdown 文件使用 UTF-8 编码保存</li><li>更新 Hexo 和主题至最新版本</li></ol><h2 id="问题排查"><a href="#问题排查" class="headerlink" title="问题排查"></a>问题排查</h2><p>遇到配置问题时，可参考官方文档：</p><ul><li><a href="https://hexo.io/zh-cn/docs/">Hexo 官方文档</a></li><li><a href="https://butterfly.js.org/">Butterfly 主题文档</a></li></ul><h2 id="安装后注意事项"><a href="#安装后注意事项" class="headerlink" title="安装后注意事项"></a>安装后注意事项</h2><ol><li>博客搭建完成后，建议定期备份 <code>source/_posts</code> 目录下的文章</li><li>避免直接修改主题核心文件，推荐在 <code>_config.butterfly.yml</code> 中进行自定义</li><li>不要随意修改 <code>package.json</code> 中的核心依赖版本</li></ol><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><ul><li><a href="https://github.com/hexojs/hexo">Hexo GitHub</a></li><li><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly GitHub</a></li><li><a href="https://docs.github.com/zh/pages">GitHub Pages 文档</a></li></ul><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.butterfly.yml   # Butterfly 主题配置</span><br><span class="line">├── _config.yml             # Hexo 主配置</span><br><span class="line">├── node_modules/           # 依赖包</span><br><span class="line">├── package.json            # 项目依赖</span><br><span class="line">├── scaffolds/              # 模板文件夹</span><br><span class="line">├── source/                 # 源文件</span><br><span class="line">│   ├── _posts/            # 文章 Markdown 文件</span><br><span class="line">│   ├── _data/             # 自定义配置</span><br><span class="line">│   ├── about/             # 关于页面</span><br><span class="line">│   ├── categories/        # 分类页面</span><br><span class="line">│   ├── tags/              # 标签页面</span><br><span class="line">│   └── img/               # 图片资源</span><br><span class="line">├── themes/                # 主题文件夹</span><br><span class="line">│   └── butterfly/         # Butterfly 主题</span><br><span class="line">└── public/                # 生成的静态文件（部署时上传）</span><br></pre></td></tr></table></figure><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建文章</span></span><br><span class="line">hexo new <span class="string">&quot;标题&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建页面</span></span><br><span class="line">hexo new page <span class="string">&quot;页面名&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 清除缓存</span></span><br><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成静态文件</span></span><br><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动本地服务器</span></span><br><span class="line">hexo server</span><br><span class="line"></span><br><span class="line"><span class="comment"># 部署</span></span><br><span class="line">hexo deploy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 组合命令（清除缓存 -&gt; 生成 -&gt; 部署）</span></span><br><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Hexo + Butterfly 为博主提供了一条快速搭建个人博客的捷径，尤其适合需要稳定写作环境、追求个性化定制的场景。如果您正在寻找一款简洁美观的博客方案，不妨一试。</p><p>如有其他问题，欢迎在评论区交流讨论。</p>]]>
+    </content>
+    <id>https://smileyoyo.github.io/Xguai/posts/hexo-butterfly-guide/</id>
+    <link href="https://smileyoyo.github.io/Xguai/posts/hexo-butterfly-guide/"/>
+    <published>2026-04-07T05:49:55.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>搭建个人博客是许多开发者的选择，但配置过程往往需要查阅大量文档。今天为大家介绍一套成熟的博客方案——<strong>Hexo + Butte]]>
+    </summary>
+    <title>Hexo + Butterfly 博客搭建指南</title>
+    <updated>2026-04-07T06:02:37.075Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Xguai</name>
@@ -29,7 +49,7 @@
       <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在日常开发中，配置编码环境、管理 MCP 服务器和插件市场往往耗费不少精力。今天为大家介绍一款实用的工具——<strong>Coding T]]>
     </summary>
     <title>编码工具助手：一键安装与配置指南</title>
-    <updated>2026-03-28T03:10:08.285Z</updated>
+    <updated>2026-04-07T06:02:37.075Z</updated>
   </entry>
   <entry>
     <author>
@@ -50,7 +70,7 @@
       <![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>一人公司如何高效运转？如何让 AI 真正像团队一样协作？今天为大家介绍一个实用的开源项目——<strong>One-Man-Company<]]>
     </summary>
     <title>One-Man-Company：一人公司多 Agent 协作系统</title>
-    <updated>2026-03-28T06:49:25.897Z</updated>
+    <updated>2026-04-07T06:02:37.075Z</updated>
   </entry>
   <entry>
     <author>
@@ -70,6 +90,6 @@
 <h2 id="为什么搭建博客？"><a h]]>
     </summary>
     <title>Hello World - 我的第一篇博客</title>
-    <updated>2026-03-28T03:14:17.601Z</updated>
+    <updated>2026-04-07T06:02:37.075Z</updated>
   </entry>
 </feed>
