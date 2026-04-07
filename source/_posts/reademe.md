@@ -1,40 +1,59 @@
 ---
-title: reademe
+title: Hexo + Butterfly 博客搭建指南
 date: 2026-04-07 13:49:55
 tags:
-  - 教学
+  - Hexo
+  - Butterfly
+  - 博客搭建
 categories:
   - 使用说明
 toc: true
-abbrlink: reademe
-date: 2026-03-24 20:00:00
+abbrlink: hexo-butterfly-guide
 top_img:
 cover:
 password:
 ---
-## 我的博客
 
-一个基于 [Hexo](https://hexo.io/) + [Butterfly](https://github.com/jerryc127/hexo-theme-butterfly) 主题的个人博客，部署在 [GitHub Pages](https://pages.github.com/) 上。
+## 前言
+
+搭建个人博客是许多开发者的选择，但配置过程往往需要查阅大量文档。今天为大家介绍一套成熟的博客方案——**Hexo + Butterfly**，它能帮助我们快速搭建一个功能完善、外观美观的个人博客，简化配置流程。
+
+## 工具简介
+
+这是一个基于 [Hexo](https://hexo.io/) 静态博客框架和 [Butterfly](https://github.com/jerryc127/hexo-theme-butterfly) 主题构建的个人博客系统，部署在 [GitHub Pages](https://pages.github.com/) 上。安装并配置完成后，即可拥有一个功能完整的个人博客。
+
+### 当前支持的功能
+
+- **文章发布与管理**
+- **标签与分类**
+- **本地搜索**
+- **响应式设计**
+- **暗黑模式**
+- **评论区支持**
+- **友链管理**
+- **网站统计**
 
 ## 功能特性
 
-- 📝 文章发布与管理
-- 🏷️ 标签与分类
-- 🔍 本地搜索
-- 📱 响应式设计
-- 🌗 暗黑模式
-- 💬 评论区支持
-- 🔗 友链管理
-- 📊 网站统计
+| 功能 | 说明 |
+|------|------|
+| 交互式向导 | 提供便捷的配置向导，帮助新手轻松上手 |
+| 多语言支持 | 支持多种语言，满足不同用户需求 |
+| 主题定制 | 支持丰富的主题自定义选项 |
+| 插件生态 | 拥有丰富的插件市场，可按需扩展功能 |
 
-## 快速开始
+## 安装方法
 
 ### 环境要求
 
 - Node.js >= 14
 - Git
 
-### 本地运行
+### 本地运行步骤
+
+1. 克隆或下载博客源码
+2. 在项目根目录打开终端
+3. 执行以下命令：
 
 ```bash
 # 安装依赖
@@ -44,49 +63,54 @@ npm install
 npm run server
 # 或
 hexo server
-
-# 访问 http://localhost:4000
 ```
 
-### 创建新文章
+4. 访问 `http://localhost:4000` 预览博客
 
-```bash
-# 创建新文章
-hexo new "文章标题"
+## 常见问题与解决方案
 
-# 或使用 npm script
-npm run new "文章标题"
-```
+### 问题1：本地服务器启动失败？
 
-### 生成静态文件
+**解决方案：**
 
-```bash
-# 生成静态文件
-hexo generate
-# 或
-hexo g
-```
+1. 检查 Node.js 版本是否 >= 14
+2. 删除 `node_modules` 文件夹，重新执行 `npm install`
+3. 检查端口 4000 是否被占用
 
-### 部署到 GitHub Pages
+### 问题2：部署到 GitHub Pages 后样式丢失？
 
-1. 首先需要修改配置文件：
-   - 编辑 `_config.yml`，将 `url` 和 `deploy.repo` 中的 `username` 替换为你的 GitHub 用户名
-   - 编辑 `_config.butterfly.yml`，修改个人信息和网站配置
+**解决方案：**
 
-2. 确保你已创建 GitHub 仓库：
-   - 仓库名称：`username.github.io`（username 替换为你的用户名）
-   - 仓库设置为 Public
+1. 检查 `_config.yml` 中的 `url` 配置是否正确
+2. 确保 `root` 配置为 `/`
+3. 清除浏览器缓存后重新访问
 
-3. 部署：
+### 问题3：中文乱码或显示异常？
 
-```bash
-# 生成并部署
-hexo deploy
-# 或
-npm run deploy
-```
+**解决方案：**
 
-4. 访问你的博客：`https://username.github.io`
+1. 检查 `_config.yml` 中的 `language` 是否设置为 `zh-CN`
+2. 确保 Markdown 文件使用 UTF-8 编码保存
+3. 更新 Hexo 和主题至最新版本
+
+## 问题排查
+
+遇到配置问题时，可参考官方文档：
+
+- [Hexo 官方文档](https://hexo.io/zh-cn/docs/)
+- [Butterfly 主题文档](https://butterfly.js.org/)
+
+## 安装后注意事项
+
+1. 博客搭建完成后，建议定期备份 `source/_posts` 目录下的文章
+2. 避免直接修改主题核心文件，推荐在 `_config.butterfly.yml` 中进行自定义
+3. 不要随意修改 `package.json` 中的核心依赖版本
+
+## 相关链接
+
+- [Hexo GitHub](https://github.com/hexojs/hexo)
+- [Butterfly GitHub](https://github.com/jerryc127/hexo-theme-butterfly)
+- [GitHub Pages 文档](https://docs.github.com/zh/pages)
 
 ## 项目结构
 
@@ -107,34 +131,6 @@ npm run deploy
 ├── themes/                # 主题文件夹
 │   └── butterfly/         # Butterfly 主题
 └── public/                # 生成的静态文件（部署时上传）
-```
-
-## 配置说明
-
-### 修改网站信息
-
-编辑 `_config.yml`：
-
-```yaml
-# Site
-title: 你的博客标题
-subtitle: 副标题
-description: 网站描述
-author: 你的名字
-language: zh-CN
-timezone: Asia/Shanghai
-```
-
-### 主题配置
-
-编辑 `_config.butterfly.yml` 来自定义主题。
-
-### 添加图片
-
-将图片放在 `source/img/` 目录下，然后在文章中引用：
-
-```markdown
-![图片描述](/img/图片名.png)
 ```
 
 ## 常用命令
@@ -162,51 +158,8 @@ hexo deploy
 hexo clean && hexo generate && hexo deploy
 ```
 
-## 自定义配置
+## 结语
 
-### 修改 GitHub 用户名
+Hexo + Butterfly 为博主提供了一条快速搭建个人博客的捷径，尤其适合需要稳定写作环境、追求个性化定制的场景。如果您正在寻找一款简洁美观的博客方案，不妨一试。
 
-1. 编辑 `_config.yml`：
-   - `url: https://your-username.github.io`
-   - `deploy.repo: https://github.com/your-username/your-username.github.io.git`
-
-2. 编辑 `_config.butterfly.yml`：
-   - `card_author.button.link: https://github.com/your-username`
-
-### 添加头像
-
-1. 将头像图片放在 `source/img/` 目录
-2. 编辑 `_config.butterfly.yml`：
-   ```yaml
-   avatar:
-     img: /img/avatar.png
-   ```
-
-### 配置评论
-
-Butterfly 支持多种评论系统，如 Waline、Twikoo、Gitalk 等。在 `_config.butterfly.yml` 中配置：
-
-```yaml
-comments:
-  use: waline # 选择评论系统
-  waline:
-    serverURL: # 你的 Waline 服务器地址
-```
-
-## 主题文档
-
-更多配置请参考 [Butterfly 主题官方文档](https://butterfly.js.org/)
-
-## 许可证
-
-[MIT License](LICENSE)
-
-## 参考
-
-- [Hexo 文档](https://hexo.io/zh-cn/docs/)
-- [Butterfly 主题](https://github.com/jerryc127/hexo-theme-butterfly)
-- [GitHub Pages](https://pages.github.com/)
-
----
-
-💡 **提示**：首次使用请仔细阅读配置说明，并根据需要修改配置文件。
+如有其他问题，欢迎在评论区交流讨论。
